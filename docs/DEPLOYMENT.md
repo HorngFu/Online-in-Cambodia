@@ -48,25 +48,43 @@ npm install
 
 ## First deploy (one-time setup)
 
-We use **Workers Builds**, Cloudflare's built-in Git integration. It is free (3,000 build minutes/month) and no API token has to be stored in GitHub.
+**Live site:** https://online-in-cambodia.horngfu.workers.dev (first deployed 2026-11-01 from the command line).
 
-1. **Create a Cloudflare account** at https://dash.cloudflare.com/sign-up (free plan; no card needed).
-2. In the dashboard, open **Workers & Pages** → **Create** → **Import a repository**.
-3. **Connect GitHub** and allow access to `HorngFu/Online-in-Cambodia` only.
-4. Configure the project:
+### Option A: deploy from your computer
+
+Useful for the very first deploy or a quick manual release.
+
+```bash
+npx wrangler login
+```
+
+```bash
+npm run deploy
+```
+
+`npm run deploy` builds the site, copies the pre-rendered pages and uploads the Worker named in `wrangler.jsonc`.
+
+### Option B: deploy automatically on every push (recommended)
+
+We use **Workers Builds**, Cloudflare's built-in Git integration. It is free (3,000 build minutes/month) and no API token has to be stored in GitHub. This can only be set up in the dashboard.
+
+1. Open the [Cloudflare dashboard](https://dash.cloudflare.com/) → **Workers & Pages** → **online-in-cambodia** → **Settings** → **Build**.
+2. Click **Connect** next to Git repository, authorize the Cloudflare GitHub app, and allow access to `HorngFu/Online-in-Cambodia` only.
+3. Fill in the build settings:
 
    | Setting | Value |
    | --- | --- |
-   | Project / Worker name | `online-in-cambodia` (must match `name` in `wrangler.jsonc`) |
-   | Production branch | `main` |
+   | Git branch (production) | `main` |
    | Build command | `npm run cf:build` |
    | Deploy command | `npx opennextjs-cloudflare deploy` |
+   | Non-production branch builds | Enabled |
    | Non-production branch deploy command | `npx opennextjs-cloudflare upload` (preview versions for pull requests) |
    | Root directory | `/` |
 
-5. Under **Build variables**, add `NODE_VERSION` = `24`.
-6. Click **Deploy**. The first build takes a few minutes.
-7. Open the URL Cloudflare shows (`https://online-in-cambodia.<your-subdomain>.workers.dev`). You should see the home page, and the language button should switch between English and Khmer.
+4. Under **Build variables**, add `NODE_VERSION` = `24`.
+5. Save. The next push to `main` deploys automatically; check progress under the Worker's **Deployments** tab.
+
+> Setting up a brand-new account instead? Use **Workers & Pages** → **Create** → **Import a repository** with the same settings. The Worker name must be `online-in-cambodia` to match `wrangler.jsonc`.
 
 > Never paste API tokens or secrets into chat or commit them. Secrets go into the Cloudflare dashboard (**Settings → Variables and Secrets**).
 

@@ -2,7 +2,7 @@
 
 **An open-source, community-maintained directory of organizations, companies, shops, places and brands in Cambodia, showing which online platforms each one is on — and which it is not on.**
 
-> 🚧 **Status:** early development. See the [roadmap](docs/DEVELOPMENT_PHASES.md) and [progress tracker](docs/DEVELOPMENT_PHASES.md#7-progress-tracker).
+> 🚧 **Status:** early development. Preview: https://online-in-cambodia.horngfu.workers.dev · See the [roadmap](docs/DEVELOPMENT_PHASES.md) and [progress tracker](docs/DEVELOPMENT_PHASES.md#7-progress-tracker).
 
 ## Why
 
