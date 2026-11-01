@@ -48,7 +48,7 @@ npm install
 
 ## First deploy (one-time setup)
 
-**Live site:** https://online-in-cambodia.horngfu.workers.dev (first deployed 2026-11-01 from the command line).
+**Live site:** https://online-in-cambodia.horngfu.workers.dev. Workers Builds is connected, so every push to `main` deploys automatically (Option B below).
 
 ### Option A: deploy from your computer
 

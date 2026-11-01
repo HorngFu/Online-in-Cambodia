@@ -273,7 +273,7 @@ Each phase is sized so it can be built and reviewed in one or a few sessions.
 - [x] `/en` and `/km` routes with dictionaries and Kantumruy Pro Khmer font (D2).
 - [x] Install Keystatic with one tiny test collection; confirm `/keystatic` loads (local mode, `npm run dev`).
 - [x] Deploy to `*.workers.dev`: live at https://online-in-cambodia.horngfu.workers.dev (deployed with `npm run deploy`).
-- [ ] Auto-deploy on push via Cloudflare Workers Builds. 👤 *One dashboard step; see [DEPLOYMENT.md](DEPLOYMENT.md#option-b-deploy-automatically-on-every-push-recommended).*
+- [x] Auto-deploy on push via Cloudflare Workers Builds (first automatic deploy 2026-11-02).
 - [x] **Check:** Worker size 5.8 MiB / 1.2 MiB gzipped versus the 64 MiB limit; pages served from the pre-rendered cache in local Workers runtime. The Keystatic API is disabled in production until Phase 5 (it needs GitHub mode to work without a filesystem).
 - [x] Set up GitHub Actions CI: install, lint, typecheck, format, Cloudflare build, size + asset count check.
 - [x] Re-check current Cloudflare free limits and update Section 5.
@@ -501,7 +501,7 @@ Pick items as needed — each can be its own mini-phase:
 | Phase | Name | Status | Notes |
 | --- | --- | --- | --- |
 | 0 | Project foundations | ✅ Done | Defaults accepted, see [DECISIONS.md](DECISIONS.md) |
-| 1 | Scaffold + Cloudflare deploy spike | 🟨 In progress | Live on workers.dev; only auto-deploy (Workers Builds) left |
+| 1 | Scaffold + Cloudflare deploy spike | ✅ Done | Live on workers.dev; auto-deploys from `main` |
 | 2 | Content model + sample data | ⬜ Not started | |
 | 3 | Public site MVP | ⬜ Not started | |
 | 4 | Search & filters | ⬜ Not started | |
