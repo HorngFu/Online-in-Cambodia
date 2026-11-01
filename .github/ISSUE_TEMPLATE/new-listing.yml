@@ -1,0 +1,128 @@
+name: ➕ Suggest a new listing
+description: Add an organization, company, shop, place or brand in Cambodia.
+title: "[New listing]: "
+labels: ["new-listing", "needs-verification"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping! Please share **public information only**, and add a source so an editor can check it.
+        If you are not sure whether a business is on a platform, leave that platform out. "Unknown" is better than a wrong answer.
+
+  - type: input
+    id: name
+    attributes:
+      label: Name (English)
+      placeholder: e.g. Brown Coffee
+    validations:
+      required: true
+
+  - type: input
+    id: name-km
+    attributes:
+      label: Name (Khmer)
+      description: Only if you know the correct spelling.
+      placeholder: e.g. ប្រោន កាហ្វេ
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - NGO / non-profit
+        - Company
+        - Shop
+        - Place (attraction, venue, market…)
+        - Brand
+        - Government
+        - School / university
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: category
+    attributes:
+      label: Category
+      placeholder: e.g. Café, Clothing, Hotel, Education, Health
+    validations:
+      required: true
+
+  - type: dropdown
+    id: provinces
+    attributes:
+      label: Province(s)
+      multiple: true
+      options:
+        - Phnom Penh
+        - Banteay Meanchey
+        - Battambang
+        - Kampong Cham
+        - Kampong Chhnang
+        - Kampong Speu
+        - Kampong Thom
+        - Kampot
+        - Kandal
+        - Kep
+        - Koh Kong
+        - Kratie
+        - Mondulkiri
+        - Oddar Meanchey
+        - Pailin
+        - Preah Sihanouk
+        - Preah Vihear
+        - Prey Veng
+        - Pursat
+        - Ratanakiri
+        - Siem Reap
+        - Stung Treng
+        - Svay Rieng
+        - Takeo
+        - Tbong Khmum
+        - Online only / nationwide
+
+  - type: textarea
+    id: available
+    attributes:
+      label: Platforms they ARE on
+      description: One per line, with the link.
+      placeholder: |
+        Website: https://example.com.kh
+        Facebook: https://facebook.com/example
+        Telegram: https://t.me/example
+        Google Maps: https://maps.app.goo.gl/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: not-available
+    attributes:
+      label: Platforms they are NOT on
+      description: Only list platforms you have checked and are sure about.
+      placeholder: |
+        TikTok
+        Delivery apps
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Short description
+      description: 1–3 neutral sentences. No advertising.
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Where can an editor check this information?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: This information is publicly available and does not include private personal data.
+          required: true
+        - label: I am connected to this organization (owner, staff, or volunteer).
+          required: false

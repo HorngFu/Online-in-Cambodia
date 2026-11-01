@@ -1,0 +1,50 @@
+name: ✏️ Suggest a correction
+description: Fix wrong, outdated or missing information on a listing.
+title: "[Correction]: "
+labels: ["correction", "needs-verification"]
+body:
+  - type: input
+    id: listing
+    attributes:
+      label: Listing
+      description: The name or link of the listing on the website.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of change?
+      options:
+        - Wrong or broken link
+        - Now available on a platform
+        - No longer on a platform
+        - Name, description or category
+        - Location / province
+        - Business has closed
+        - Remove this listing
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: What should change?
+      description: Tell us what is wrong now and what it should be.
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: A link where an editor can confirm the correct information.
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I am connected to this organization (owner, staff, or volunteer).
+          required: false

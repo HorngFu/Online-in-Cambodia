@@ -1,0 +1,43 @@
+name: 🐞 Report a website bug
+description: Something on the website is broken or looks wrong.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead? Screenshots help.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to …
+        2. Click …
+        3. See …
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Website language
+      options:
+        - English
+        - Khmer
+        - Both
+
+  - type: input
+    id: device
+    attributes:
+      label: Device and browser
+      placeholder: e.g. Android phone, Chrome

@@ -1,0 +1,37 @@
+name: 🚩 Report a fake or scam page
+description: Tell us about a page that pretends to be a listed organization.
+title: "[Fake page]: "
+labels: ["fake-report", "priority"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If you have lost money or been threatened, please also report it to the platform and the local authorities.
+        **Don't share your own private information here**, because issues are public.
+
+  - type: input
+    id: listing
+    attributes:
+      label: Which organization is being impersonated?
+      description: Name or link of the listing on our website, if it exists.
+    validations:
+      required: true
+
+  - type: input
+    id: fake-url
+    attributes:
+      label: Link to the fake page
+    validations:
+      required: true
+
+  - type: input
+    id: official-url
+    attributes:
+      label: Link to the real, official page (if you know it)
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Why do you think it is fake?
+    validations:
+      required: true
