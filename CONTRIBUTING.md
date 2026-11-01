@@ -37,8 +37,6 @@ These rules keep the directory trustworthy.
 
 ## Development workflow
 
-> The app itself is scaffolded in Phase 1. See the [roadmap](docs/DEVELOPMENT_PHASES.md).
-
 1. **Find or open an issue** describing the change, so work isn't duplicated.
 2. **Fork** the repository (or create a branch if you are a maintainer).
 3. **Create a branch** with a clear name: `feat/search-filters`, `fix/khmer-font`, `content/add-siem-reap-cafes`.
@@ -51,7 +49,8 @@ These rules keep the directory trustworthy.
    ```bash
    npm run lint
    npm run typecheck
-   npm run build
+   npm run format:check
+   npm run preview   # production build in Cloudflare's local runtime
    ```
 6. **Open a pull request** using the template, and link the issue (`Closes #123`).
 7. A maintainer will review it. CI must pass before merging.
@@ -62,9 +61,9 @@ Use short, descriptive messages. Prefixes help: `feat:`, `fix:`, `docs:`, `conte
 
 ### Code style
 
-- TypeScript, formatted with Prettier and checked with ESLint (set up in Phase 1).
+- TypeScript, formatted with Prettier (`npm run format`) and checked with ESLint.
 - Keep components small and accessible: use icons *and* text, never color alone, to show availability.
-- Every user-facing string goes in the translation files (`en` and `km`).
+- Every user-facing string goes in the translation files: `src/i18n/dictionaries/en.json` and `km.json`.
 
 ## Corrections and takedown requests
 

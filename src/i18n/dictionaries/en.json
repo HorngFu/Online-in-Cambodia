@@ -1,0 +1,14 @@
+{
+  "site": {
+    "name": "Online in Cambodia",
+    "tagline": "Find where organizations, businesses and places in Cambodia are online, and where they are not."
+  },
+  "home": {
+    "comingSoon": "We're building the directory. Check back soon!",
+    "listingsCount": "Listings so far",
+    "contribute": "Help build it on GitHub"
+  },
+  "language": {
+    "switchTo": "ភាសាខ្មែរ"
+  }
+}

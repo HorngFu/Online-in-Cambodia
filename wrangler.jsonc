@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "online-in-cambodia",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-10-20",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS",
+  },
+  "services": [
+    {
+      // Self-reference used by OpenNext for caching; must match "name" above.
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "online-in-cambodia",
+    },
+  ],
+  "observability": {
+    "enabled": true,
+  },
+}

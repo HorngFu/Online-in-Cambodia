@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Lint, typecheck, build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Formatting
+        run: npm run format:check
+
+      - name: Build for Cloudflare
+        run: npm run cf:build
+
+      # Copies prerendered pages into the assets folder, as a real deploy does,
+      # so the asset count below matches what Cloudflare will receive.
+      - name: Populate page cache
+        run: npx opennextjs-cloudflare populateCache local
+
+      # Workers allow 64 MiB uncompressed and 20,000 static asset files per
+      # version on the free plan. Fail early so we notice before a deploy is rejected.
+      - name: Check Worker size and asset count
+        run: |
+          npx wrangler deploy --dry-run --outdir .wrangler/dry-run | tee dry-run.log
+          total_kib=$(grep -oP 'Total Upload: \K[0-9.]+' dry-run.log)
+          gzip_kib=$(grep -oP 'gzip: \K[0-9.]+' dry-run.log)
+          assets=$(find .open-next/assets -type f | wc -l)
+          {
+            echo "### Worker build"
+            echo "- Size: ${total_kib} KiB (${gzip_kib} KiB gzipped), limit 65536 KiB"
+            echo "- Static asset files: ${assets}, free limit 20000"
+          } >> "$GITHUB_STEP_SUMMARY"
+          awk -v size="$total_kib" 'BEGIN { exit (size > 58982) }' || {
+            echo "::error::Worker is ${total_kib} KiB, close to the 64 MiB limit."
+            exit 1
+          }
+          [ "$assets" -le 18000 ] || {
+            echo "::error::${assets} static asset files, close to the 20,000 free-plan limit."
+            exit 1
+          }

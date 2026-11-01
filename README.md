@@ -30,16 +30,17 @@ Why these choices: [docs/DECISIONS.md](docs/DECISIONS.md).
 
 ## Getting started
 
-> The app is scaffolded in Phase 1. These steps will work once it exists.
+Requires Node.js 24 (see `.nvmrc`).
 
 ```bash
-# Requires Node.js (version in .nvmrc)
 npm install
 npm run dev
 ```
 
-- Website: http://localhost:3000
+- Website: http://localhost:3000 (redirects to `/en`; Khmer is at `/km`)
 - Content editor (Keystatic): http://localhost:3000/keystatic
+
+To run the production build in Cloudflare's local runtime, use `npm run preview`. Deployment is covered in [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
 
 ## Contributing
 
@@ -59,6 +60,7 @@ Please follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 - [Development phases (roadmap)](docs/DEVELOPMENT_PHASES.md)
 - [Decisions](docs/DECISIONS.md)
+- [Deployment](docs/DEPLOYMENT.md)
 - [Contributing guide](CONTRIBUTING.md)
 - [Security policy](SECURITY.md)
 
