@@ -114,6 +114,7 @@ CI writes the Worker size and asset count to each run's summary and fails before
 | Problem | Fix |
 | --- | --- |
 | `OpenNext is not fully compatible with Windows` warning | Builds and local preview worked on Windows 11 during Phase 1. If you hit strange errors, run the commands in WSL. Production builds run on Linux in Cloudflare, so they are unaffected. |
+| Push to `main` doesn't deploy | In **Settings → Build**, check the repository is connected, the branch is `main`, and the commands match the table above exactly (a typo such as `px` instead of `npx` makes every build fail). Build logs are under **Deployments → View build history**. |
 | Local preview shows a different website | Another `wrangler dev` (from another project) is already on port 8787. Stop it, or run `npx wrangler dev --port 8799`. |
 | Home page shows **0** listings in preview | Pre-rendered pages weren't copied into the cache. Use `npm run preview` (or run `npx opennextjs-cloudflare populateCache local` before `wrangler dev`). |
 | `/keystatic` works locally but not on the live site | Expected until Phase 5. The live site has no filesystem, so the editor's API is switched off until GitHub mode is configured. |
