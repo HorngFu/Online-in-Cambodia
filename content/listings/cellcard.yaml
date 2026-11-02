@@ -46,4 +46,5 @@ platforms:
 sources:
   - https://www.cellcard.com.kh/
 lastVerified: 2026-11-02
+verifiedBy: keystatic-test
 status: active
