@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Kantumruy_Pro } from "next/font/google";
 import { notFound } from "next/navigation";
+import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
 import { hasLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import "../globals.css";
@@ -30,7 +32,7 @@ export async function generateMetadata({
   const dict = await getDictionary(lang);
 
   return {
-    title: dict.site.name,
+    title: { default: dict.site.name, template: `%s · ${dict.site.name}` },
     description: dict.site.tagline,
   };
 }
@@ -41,13 +43,20 @@ export default async function RootLayout({
 }: LayoutProps<"/[lang]">) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
+  const dict = await getDictionary(lang);
 
   return (
     <html
       lang={lang}
       className={`${inter.variable} ${kantumruy.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        <SiteHeader lang={lang} dict={dict} />
+        <main id="content" className="mx-auto w-full max-w-5xl flex-1 px-4">
+          {children}
+        </main>
+        <SiteFooter lang={lang} dict={dict} />
+      </body>
     </html>
   );
 }

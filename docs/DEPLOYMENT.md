@@ -102,8 +102,8 @@ Checked on 2026-11-01 against https://developers.cloudflare.com/workers/platform
 | --- | --- | --- |
 | Requests per day | 100,000 | Static assets (JS, CSS, fonts, images) don't count, and pre-rendered pages are cheap |
 | CPU time per request | 10 ms | Pre-rendered pages are served from cache in a few ms |
-| Worker size (uncompressed) | 64 MiB | 5.8 MiB (1.2 MiB gzipped) in Phase 1 |
-| Static asset files per version | 20,000 | 33 in Phase 1. Each pre-rendered page adds 1 cache file per language, so with 2 languages we reach the limit at roughly 8,000–9,000 listings |
+| Worker size (uncompressed) | 64 MiB | 6.6 MiB (1.3 MiB gzipped) in Phase 3 |
+| Static asset files per version | 20,000 | 274 in Phase 3 (about 240 pre-rendered pages). Each listing adds 1 cache file per language, so with 2 languages we reach the limit at roughly 8,000–9,000 listings |
 | Subrequests per request | 50 | Not a concern for static pages |
 | Workers Builds | 3,000 min/month, 1 concurrent build, 20 min timeout | Builds take a few minutes |
 

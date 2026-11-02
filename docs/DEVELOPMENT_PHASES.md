@@ -180,7 +180,7 @@ One file per entity, e.g. `content/listings/brown-coffee.yaml`.
 | `urlPattern` | Optional regex to validate links |
 | `linkRequired` | `false` for platforms without a page to link to (payments, WeChat, delivery apps) |
 | `order` | Display order in the grid |
-| `icon` | *(Phase 3)* SVG icon |
+| *(icons)* | The site shows one generic icon per platform **group** (Lucide). Brand logos are not used, to avoid trademark issues. |
 
 **Starting list (26 platforms, seeded in Phase 2; please review — D10):**
 
@@ -320,13 +320,14 @@ Each phase is sized so it can be built and reviewed in one or a few sessions.
 **Goal:** Visitors can browse and view listings with the platform availability grid.
 
 **Pages**
-- [ ] **Home** — hero search box, browse by type/category/province, recently added, quick stats.
-- [ ] **Listings index** `/listings` — cards with name, logo, type, small platform icons.
-- [ ] **Listing detail** `/listings/[slug]` — logo, names (EN/KM), description, **platform grid grouped by platform group** (✅ / ❌ / ❔ with links), last verified date, sources, "Suggest an edit" button.
-- [ ] **Category** `/categories/[slug]` and **Province** `/provinces/[slug]`.
-- [ ] **Platform** `/platforms/[slug]` — who is on it and who is not.
-- [ ] **About**, **How to contribute**, **Data & license** pages.
-- [ ] 404 page, responsive layout, dark mode, accessible colors (not color-only ✅/❌ — use icons + text).
+- [x] **Home**: hero, browse by type/category/province, recently verified, quick stats. *(Search box arrives with Phase 4.)*
+- [x] **Listings index** `/listings`: cards with name, type, provinces and platform-group icons. *(Logos once listings have them.)*
+- [x] **Listing detail** `/listings/[slug]`: names (EN/KM), description, **platform grid grouped by platform group** (✅ / ❌ with links; unchecked platforms folded into an expandable list), details, last verified, sources, "Suggest an edit" and "Report a fake page" (pre-filled GitHub forms).
+- [x] **Category** (index + `/categories/[slug]`, including subcategories), **Province** (index + `/provinces/[slug]`, with nationwide listings in their own section) and **Type** `/types/[type]`.
+- [x] **Platform** (index + `/platforms/[slug]`): who is on it, who is not, and how many are unchecked.
+- [x] **About**, **Contribute**, **Data & license** pages.
+- [x] Bilingual 404, responsive layout, dark mode, availability shown with icons + text (never color only), skip link, language switch that keeps the current page.
+- [x] Lighthouse (mobile, local Workers preview): home 93 / 100 / 100 / 100, listing 96 / 100 / 100 / 100, platform page 92 / 100 / 100 / 100 (performance / accessibility / best practices / SEO).
 
 **Done when**
 - All pages are statically generated and work on mobile.
@@ -389,7 +390,7 @@ Each phase is sized so it can be built and reviewed in one or a few sessions.
 **Goal:** Full site in English and Khmer.
 
 **Tasks**
-- [ ] Language switcher that keeps the current page, `hreflang` tags. *(Routes exist since Phase 1.)*
+- [ ] `hreflang` alternate tags. *(Language switcher that keeps the current page was built in Phase 3.)*
 - [ ] Complete and review UI strings (`src/i18n/dictionaries/en.json`, `km.json`).
 - [ ] Khmer fonts with correct line-height; test long Khmer names in cards.
 - [ ] Listing fields fall back to English when Khmer is missing.
@@ -398,7 +399,7 @@ Each phase is sized so it can be built and reviewed in one or a few sessions.
 - Every page works in both languages; a native Khmer speaker has reviewed UI text.
 
 **Ask Claude**
-> Start Phase 6. Finish the English/Khmer translations, the page-aware language switcher and hreflang tags.
+> Start Phase 6. Finish and review the English/Khmer translations and add hreflang tags.
 
 ---
 
@@ -506,7 +507,7 @@ Pick items as needed — each can be its own mini-phase:
 | 0 | Project foundations | ✅ Done | Defaults accepted, see [DECISIONS.md](DECISIONS.md) |
 | 1 | Scaffold + Cloudflare deploy spike | ✅ Done | Live on workers.dev; auto-deploys from `main` |
 | 2 | Content model + sample data | ✅ Done | 28 listings; Khmer labels awaiting native review |
-| 3 | Public site MVP | ⬜ Not started | |
+| 3 | Public site MVP | ✅ Done | ~240 pre-rendered pages; Lighthouse ≥ 92 everywhere |
 | 4 | Search & filters | ⬜ Not started | |
 | 5 | Keystatic GitHub mode (online editing) | ⬜ Not started | **MVP** |
 | 6 | Khmer / English | ⬜ Not started | D2: i18n set up in Phases 1–3; this phase finishes and reviews translations |

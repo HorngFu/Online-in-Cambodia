@@ -25,5 +25,6 @@ This file records the project decisions from [DEVELOPMENT_PHASES.md — Section 
 | --- | --- | --- |
 | 2026-11-01 | D1–D12 | Initial decisions recorded. |
 | 2026-11-01 | D2 | Use Next.js's built-in `app/[lang]` + JSON dictionaries pattern instead of `next-intl`: no extra dependency, fully static pages. Revisit if we need ICU plurals. |
+| 2026-11-02 | — | 404s: one bilingual page via Next.js `global-not-found` (experimental flag), because unknown URLs never reach a language-specific page when every page is pre-built. Verified on the local Workers runtime. |
 | 2026-11-02 | D10 | Platform list finalized for seeding: KHQR replaces individual bank apps, foodpanda and a Mobile apps group added, Facebook Marketplace and Shopify dropped. |
 | 2026-11-01 | D6 | Cache Components turned off (classic static generation) for the most predictable OpenNext behaviour; `/` → `/en` is a config redirect, not a proxy. |

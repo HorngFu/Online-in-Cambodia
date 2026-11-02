@@ -3,6 +3,10 @@ import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 import { defaultLocale } from "./src/i18n/config";
 
 const nextConfig: NextConfig = {
+  experimental: {
+    // Bilingual 404 for URLs outside /en and /km (we have no single root layout).
+    globalNotFound: true,
+  },
   turbopack: {
     rules: {
       "*.css": {

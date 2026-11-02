@@ -3,12 +3,142 @@
     "name": "Online in Cambodia",
     "tagline": "Find where organizations, businesses and places in Cambodia are online, and where they are not."
   },
-  "home": {
-    "comingSoon": "We're building the directory. Check back soon!",
-    "listingsCount": "Listings so far",
-    "contribute": "Help build it on GitHub"
+  "nav": {
+    "home": "Home",
+    "listings": "Listings",
+    "categories": "Categories",
+    "provinces": "Provinces",
+    "platforms": "Platforms",
+    "about": "About",
+    "contribute": "Contribute",
+    "skipToContent": "Skip to content",
+    "mainNav": "Main navigation",
+    "breadcrumb": "Breadcrumb"
   },
   "language": {
-    "switchTo": "ភាសាខ្មែរ"
+    "switchTo": "ភាសាខ្មែរ",
+    "switchLabel": "Switch to Khmer"
+  },
+  "home": {
+    "heroTitle": "Is it online? Find out here.",
+    "heroText": "A free, community-maintained directory of organizations, companies, shops, places and brands in Cambodia, showing which online platforms each one is on, and which it is not.",
+    "browseListings": "Browse all listings",
+    "howToHelp": "Add a listing",
+    "statListings": "Listings",
+    "statPlatforms": "Platforms tracked",
+    "statCategories": "Categories",
+    "statProvinces": "Provinces covered",
+    "browseByType": "Browse by type",
+    "browseByCategory": "Browse by category",
+    "browseByProvince": "Browse by province",
+    "recentlyVerified": "Recently verified",
+    "viewAll": "View all",
+    "ctaTitle": "Know a business that's missing?",
+    "ctaText": "Anyone can suggest a new listing or a correction. No coding needed.",
+    "ctaButton": "Suggest a listing"
+  },
+  "listing": {
+    "platforms": "Online platforms",
+    "available": "Available",
+    "notAvailable": "Not available",
+    "unknown": "Unknown",
+    "unknownHelp": "Nobody has checked these yet. Know the answer? Suggest an edit.",
+    "showUnknown": "Show {count} unchecked platforms",
+    "unofficial": "Not an official account",
+    "lastVerified": "Last verified",
+    "verifiedBy": "by {name}",
+    "sources": "Sources",
+    "suggestEdit": "Suggest an edit",
+    "reportFake": "Report a fake page",
+    "details": "Details",
+    "type": "Type",
+    "categories": "Categories",
+    "provinces": "Provinces",
+    "status": "Status",
+    "closedNotice": "This listing is marked as closed.",
+    "unverifiedNotice": "This listing hasn't been verified by an editor yet.",
+    "summary": "{available} available · {notAvailable} not available · {unknown} unknown",
+    "availableCount": "{count} platforms available",
+    "visit": "Visit {platform}",
+    "open": "Open"
+  },
+  "listings": {
+    "title": "All listings",
+    "description": "Every organization, business, place and brand in the directory.",
+    "count": "{count} listings",
+    "countOne": "1 listing",
+    "empty": "No listings here yet."
+  },
+  "categories": {
+    "title": "Categories",
+    "description": "Browse listings by what they do.",
+    "subcategories": "Subcategories"
+  },
+  "provinces": {
+    "title": "Provinces",
+    "description": "Browse listings by where they are.",
+    "nationwideNote": "Listings marked nationwide or online only appear on every province page under their own heading.",
+    "local": "In {province}",
+    "nationwide": "Nationwide or online only"
+  },
+  "platforms": {
+    "title": "Platforms",
+    "description": "Which listings are on each platform, and which are not.",
+    "onPlatform": "On {platform}",
+    "notOnPlatform": "Not on {platform}",
+    "unknownCount": "{count} listings haven't been checked for {platform} yet.",
+    "linkOptional": "Listings don't need a link for this platform."
+  },
+  "types": {
+    "title": "Types"
+  },
+  "about": {
+    "title": "About",
+    "intro": "Online in Cambodia helps people find the official online channels of organizations, businesses and places in Cambodia, and see which platforms they are not on.",
+    "whyTitle": "Why",
+    "why": "It's often hard to tell whether a shop is on Telegram, whether an NGO has a website, or whether a Facebook page is the official one or a fake. This directory answers those questions in one place, and shows where Cambodia's digital presence still has gaps.",
+    "howTitle": "How the data works",
+    "how": "Every listing shows each platform as available (with a link), not available, or unknown. A platform is only marked not available when an editor has checked. Each listing has sources and a last-verified date.",
+    "openTitle": "Open source, open data",
+    "open": "The website code is open source under the MIT license, and the data is open under CC BY-SA 4.0. Anyone can reuse it with credit."
+  },
+  "contribute": {
+    "title": "Contribute",
+    "intro": "You don't need to be a developer to help. Every suggestion is reviewed by an editor before it appears on the site.",
+    "suggestTitle": "Suggest a new listing",
+    "suggestText": "Fill in a short form with the name, platforms and a source link.",
+    "correctTitle": "Fix wrong information",
+    "correctText": "Tell us what changed: a new page, a closed account, a broken link.",
+    "fakeTitle": "Report a fake page",
+    "fakeText": "Seen a page pretending to be a listed organization? Let us know.",
+    "codeTitle": "Code and documentation",
+    "codeText": "Developers and writers can contribute on GitHub. Start with the contributing guide.",
+    "editorTitle": "Become an editor",
+    "editorText": "Editors add and verify listings. Open an issue titled \"Editor request\" to volunteer.",
+    "githubNote": "These forms open on GitHub. You'll need a free GitHub account."
+  },
+  "data": {
+    "title": "Data & license",
+    "intro": "All directory data is free to reuse under the Creative Commons Attribution-ShareAlike 4.0 license (CC BY-SA 4.0).",
+    "creditTitle": "How to credit",
+    "credit": "Data from Online in Cambodia contributors, CC BY-SA 4.0",
+    "downloadTitle": "Get the data",
+    "download": "The raw data lives in the content folder of the GitHub repository, one YAML file per listing. Downloadable JSON and CSV exports are planned.",
+    "logosTitle": "Logos and trademarks",
+    "logos": "Logos and brand names belong to their owners and are shown only to identify each listing. They are not covered by the data license.",
+    "correctionsTitle": "Corrections and removal",
+    "corrections": "Listings contain public information only. If you represent a listed organization and want something corrected or removed, please send a correction request."
+  },
+  "footer": {
+    "about": "About",
+    "data": "Data & license",
+    "github": "GitHub",
+    "license": "Code MIT · Data CC BY-SA 4.0",
+    "community": "Built by the community, for Cambodia."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "We couldn't find that page. It may have moved, or the link may be wrong.",
+    "home": "Go to the home page"
   }
 }
