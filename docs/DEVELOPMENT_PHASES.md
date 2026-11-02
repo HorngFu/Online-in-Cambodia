@@ -369,11 +369,13 @@ Each phase is sized so it can be built and reviewed in one or a few sessions.
 **Goal:** Trusted editors edit content on the live site; every edit becomes a commit or PR.
 
 **Tasks**
-- [ ] Switch Keystatic storage to `github` in production, `local` in development.
-- [ ] Create the Keystatic GitHub App and set secrets in Cloudflare (`KEYSTATIC_GITHUB_CLIENT_ID`, `KEYSTATIC_GITHUB_CLIENT_SECRET`, `KEYSTATIC_SECRET`, `NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG`).
-- [ ] Branch protection on `main`: editors work in branches → PR → CI validation → merge → auto deploy.
-- [ ] Image upload path for logos with size guidance.
-- [ ] Doc: `docs/EDITOR_GUIDE.md` with screenshots.
+- [x] Keystatic storage is `github` in production (app slug built in), `local` in development unless `.env` sets the slug. Editors' branches use the `content/` prefix.
+- [x] GitHub App **online-in-cambodia-keystatic** created through `/keystatic/setup` and installed on this repo only. Runtime secrets (`KEYSTATIC_GITHUB_CLIENT_ID`, `KEYSTATIC_GITHUB_CLIENT_SECRET`, `KEYSTATIC_SECRET`) set on the Worker. The editor API reads them on first request, so builds don't need them.
+- [x] Tested on the live site: signed in with GitHub, created `content/test-online-editing`, saved an edit (a one-line commit), opened [test PR #1](https://github.com/HorngFu/Online-in-Cambodia/pull/1); CI passes on it.
+- [x] Pull request branches get a **Worker Preview** (`https://<branch>-online-in-cambodia.horngfu.workers.dev`), built with OpenNext and served from pre-rendered pages. See [DEPLOYMENT.md](DEPLOYMENT.md#everyday-deploys).
+- [ ] Branch protection on `main` (require a PR + passing CI, admins may bypass). 👤 *Your decision; changes repo settings.*
+- [x] Image upload path for logos (`public/logos/`, 50 KB guidance, validated in CI).
+- [x] Doc: [`docs/EDITOR_GUIDE.md`](EDITOR_GUIDE.md) (access, sign in, branch, PR, setup and secrets reference, troubleshooting). *Screenshots to add later.*
 
 **Done when**
 - An editor logs in at `/keystatic` with GitHub, adds a listing, opens a PR, merges it, and sees it live after deploy.
@@ -513,7 +515,7 @@ Pick items as needed — each can be its own mini-phase:
 | 2 | Content model + sample data | ✅ Done | 28 listings; Khmer labels awaiting native review |
 | 3 | Public site MVP | ✅ Done | ~240 pre-rendered pages; Lighthouse ≥ 92 everywhere |
 | 4 | Search & filters | ✅ Done | Index 1.5 KB gzipped; 14 unit tests |
-| 5 | Keystatic GitHub mode (online editing) | ⬜ Not started | **MVP** |
+| 5 | Keystatic GitHub mode (online editing) | ✅ Done | **MVP complete.** Branch protection pending your decision |
 | 6 | Khmer / English | ⬜ Not started | D2: i18n set up in Phases 1–3; this phase finishes and reviews translations |
 | 7 | Community contributions | ⬜ Not started | |
 | 8 | SEO, sharing & analytics | ⬜ Not started | |

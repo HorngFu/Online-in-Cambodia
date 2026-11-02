@@ -34,7 +34,7 @@ npm run dev
 
 Then open http://localhost:3000/keystatic. Changes are saved straight to the files on your computer; commit them and open a pull request as usual.
 
-> Online editing on the live site arrives in Phase 5. Until then, the editor only works locally.
+> Editors can also work online at https://online-in-cambodia.horngfu.workers.dev/keystatic, see the [editor guide](EDITOR_GUIDE.md).
 
 ## Add a listing
 

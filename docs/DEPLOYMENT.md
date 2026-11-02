@@ -77,8 +77,8 @@ We use **Workers Builds**, Cloudflare's built-in Git integration. It is free (3,
    | Git branch (production) | `main` |
    | Build command | `npm run cf:build` |
    | Deploy command | `npx opennextjs-cloudflare deploy` |
-   | Non-production branch builds | Enabled |
-   | Non-production branch deploy command | `npx opennextjs-cloudflare upload` (preview versions for pull requests) |
+   | Previews Base → Build command | `npm run cf:build` |
+   | Previews Base → Preview command | `npx opennextjs-cloudflare populateCache local && npx wrangler preview` |
    | Root directory | `/` |
 
 4. Under **Build variables**, add `NODE_VERSION` = `24`.
@@ -91,7 +91,10 @@ We use **Workers Builds**, Cloudflare's built-in Git integration. It is free (3,
 ## Everyday deploys
 
 - **Push or merge to `main`** → Cloudflare builds and deploys production automatically.
-- **Open a pull request** → GitHub Actions runs CI (lint, typecheck, format, Cloudflare build, size check), and Workers Builds uploads a preview version with its own URL.
+- **Push a branch / open a pull request** → GitHub Actions runs CI (lint, typecheck, format, content validation, tests, Cloudflare build, size check), and Workers Builds creates a **Worker Preview** for the branch at `https://<branch-name>-online-in-cambodia.horngfu.workers.dev` (for example `content/add-cafes` → `content-add-cafes-online-in-cambodia…`). Cloudflare comments the link on the pull request.
+  - Previews need the `"previews": {}` block in `wrangler.jsonc`.
+  - Each branch's preview copies the **Previews Base** settings when it's first built. If you change those settings, existing branches keep the old ones: delete the preview (`npx wrangler preview delete --name <branch>`) or use a new branch.
+  - Previews don't have the production secrets, so `/keystatic` only works on the live site.
 - **Roll back**: Cloudflare dashboard → the Worker → **Deployments** → pick an earlier version → **Rollback**.
 
 ## Free-plan limits we watch
@@ -114,6 +117,7 @@ CI writes the Worker size and asset count to each run's summary and fails before
 | Problem | Fix |
 | --- | --- |
 | `OpenNext is not fully compatible with Windows` warning | Builds and local preview worked on Windows 11 during Phase 1. If you hit strange errors, run the commands in WSL. Production builds run on Linux in Cloudflare, so they are unaffected. |
+| PR preview build fails with "needs a `previews` block" or "name … must match the name of your Worker" | The preview command must be `npx opennextjs-cloudflare populateCache local && npx wrangler preview` (Settings → Build → **Previews Base**), and `wrangler.jsonc` must contain `"previews": {}`. Branches whose preview was created with older settings keep them; see Everyday deploys. |
 | Push to `main` doesn't deploy | In **Settings → Build**, check the repository is connected, the branch is `main`, and the commands match the table above exactly (a typo such as `px` instead of `npx` makes every build fail). Build logs are under **Deployments → View build history**. |
 | Local preview shows a different website | Another `wrangler dev` (from another project) is already on port 8787. Stop it, or run `npx wrangler dev --port 8799`. |
 | Home page shows **0** listings in preview | Pre-rendered pages weren't copied into the cache. Use `npm run preview` (or run `npx opennextjs-cloudflare populateCache local` before `wrangler dev`). |

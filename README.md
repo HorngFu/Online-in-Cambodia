@@ -62,6 +62,7 @@ Please follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 - [Decisions](docs/DECISIONS.md)
 - [Deployment](docs/DEPLOYMENT.md)
 - [Content guide](docs/CONTENT_GUIDE.md)
+- [Editor guide](docs/EDITOR_GUIDE.md) (online editing)
 - [Contributing guide](CONTRIBUTING.md)
 - [Security policy](SECURITY.md)
 

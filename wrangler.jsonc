@@ -18,4 +18,8 @@
   "observability": {
     "enabled": true,
   },
+  // Worker Previews for pull request branches (`wrangler preview` in
+  // Workers Builds). Previews don't get the production secrets, so the
+  // online editor only works on the live site.
+  "previews": {},
 }
