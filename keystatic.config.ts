@@ -8,16 +8,22 @@ import {
   toOptions,
 } from "./src/lib/taxonomy";
 
-// GitHub mode switches on once the GitHub App exists (Phase 5), signalled by
-// its slug env var. Until then Keystatic runs in local mode, which only works
-// with `npm run dev` because it edits files on disk.
-export const isGitHubMode = Boolean(
-  process.env.NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG,
-);
+// GitHub mode is on when the GitHub App's slug is set (see docs/EDITOR_GUIDE.md).
+// NEXT_PUBLIC_KEYSTATIC_STORAGE=github forces it on for the one-time app setup.
+// Otherwise Keystatic runs in local mode, which edits files on disk and only
+// works with `npm run dev`.
+export const isGitHubMode =
+  Boolean(process.env.NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG) ||
+  process.env.NEXT_PUBLIC_KEYSTATIC_STORAGE === "github";
 
 export default config({
   storage: isGitHubMode
-    ? { kind: "github", repo: "HorngFu/Online-in-Cambodia" }
+    ? {
+        kind: "github",
+        repo: "HorngFu/Online-in-Cambodia",
+        // Editors work on content/* branches and open pull requests into main.
+        branchPrefix: "content/",
+      }
     : { kind: "local" },
   ui: {
     brand: { name: "Online in Cambodia" },
