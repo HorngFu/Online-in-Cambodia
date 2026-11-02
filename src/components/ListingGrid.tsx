@@ -24,11 +24,17 @@ export function ListingGrid({
       {(heading || showCount) && (
         <div className="flex items-baseline justify-between gap-4">
           {heading && <h2 className="text-xl font-semibold">{heading}</h2>}
-          {showCount && (
-            <p className="text-sm text-muted">
-              {listingCount(dict, listings.length)}
-            </p>
-          )}
+          {/* Without a heading, the count is the h2 so card titles (h3) keep heading order. */}
+          {showCount &&
+            (heading ? (
+              <p className="text-sm text-muted">
+                {listingCount(dict, listings.length)}
+              </p>
+            ) : (
+              <h2 className="text-sm font-normal text-muted">
+                {listingCount(dict, listings.length)}
+              </h2>
+            ))}
         </div>
       )}
       {listings.length === 0 ? (

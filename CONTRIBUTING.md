@@ -50,6 +50,7 @@ These rules keep the directory trustworthy.
    npm run lint
    npm run typecheck
    npm run format:check
+   npm test
    npm run preview   # production build in Cloudflare's local runtime
    ```
 6. **Open a pull request** using the template, and link the issue (`Closes #123`).

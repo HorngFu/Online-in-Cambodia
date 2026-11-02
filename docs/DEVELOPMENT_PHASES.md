@@ -86,7 +86,7 @@ Recommended defaults are marked **(Recommended)**. If you don't answer, Claude w
 | CMS | **Keystatic** (local mode in dev, GitHub mode in production) | Your choice; content stored as files in this repo, free. |
 | Content storage | YAML / Markdoc files in `content/` | Diffable, reviewable, no database to pay for. |
 | Hosting | **Cloudflare Workers** with **OpenNext** (`@opennextjs/cloudflare`) | Your choice; generous free tier, global CDN. |
-| Search | Build-time JSON index + client-side fuzzy search (e.g. FlexSearch / Fuse.js / Pagefind) | $0, fast, supports Khmer text with the right tokenizer. |
+| Search | Build-time JSON index + client-side substring search (`src/lib/search.ts`) | $0, no dependency, works for Khmer (no word breaks needed). Add typo tolerance or a library later if needed. |
 | i18n | Next.js built-in pattern: `app/[lang]` routes (`/en/...`, `/km/...`) + JSON dictionaries in `src/i18n/` | No extra dependency; pages stay fully static. Can move to `next-intl` later if we need plurals/ICU formatting. |
 | Fonts | Kantumruy Pro or Noto Sans Khmer + Inter | Good Khmer rendering. |
 | Analytics | Cloudflare Web Analytics | Free, privacy-friendly. |
@@ -343,12 +343,16 @@ Each phase is sized so it can be built and reviewed in one or a few sessions.
 **Goal:** Find anything in a second, and answer "who is / isn't on platform X".
 
 **Tasks**
-- [ ] Build-time search index (`/search-index.json`), compact fields only.
-- [ ] Client-side search supporting English and Khmer (handle Khmer having no spaces between words — use n-gram / character tokenization).
-- [ ] Filters: type, category, province, **platform = available / not available / unknown**.
-- [ ] Filters stored in URL query params (shareable links).
-- [ ] Sort: name, recently verified, recently added.
-- [ ] Empty state with "Can't find it? Suggest it" link.
+- [x] Build-time search index `/search-index.json` (static, short keys). 28 listings = 6.6 KB, **1.5 KB gzipped** (~53 bytes per listing gzipped, so ~270 KB at 5,000 listings).
+- [x] Client-side search in English and Khmer: normalized substring matching, so Khmer works without word breaks. Searches names first, then category, type and province names in both languages. No search library needed (`src/lib/search.ts`).
+- [x] Filters: type, category (parents include subcategories), province (with an "include nationwide" toggle), **platform = is on / is not on (checked) / not checked yet**.
+- [x] Filters live in the URL query string (shareable links, back button works). The home page search box submits to `/listings?q=…`.
+- [x] Sort: best match, name, recently verified. *("Recently added" needs a created date, which listings don't have yet.)*
+- [x] Empty state with "Can't find it? Suggest a listing".
+- [x] Without JavaScript (or before the index loads) the full pre-rendered list is shown.
+- [x] On phones, filters fold behind a "Filters" button showing how many are active.
+- [x] Unit tests for search and filters (`npm test`, 14 tests incl. Khmer), run in CI.
+- [x] Lighthouse: listings page 94 / 100 / 100 / 100; heading-order and language-button label issues fixed site-wide.
 
 **Done when**
 - Searching "coffee" or "កាហ្វេ" returns relevant results.
@@ -508,7 +512,7 @@ Pick items as needed — each can be its own mini-phase:
 | 1 | Scaffold + Cloudflare deploy spike | ✅ Done | Live on workers.dev; auto-deploys from `main` |
 | 2 | Content model + sample data | ✅ Done | 28 listings; Khmer labels awaiting native review |
 | 3 | Public site MVP | ✅ Done | ~240 pre-rendered pages; Lighthouse ≥ 92 everywhere |
-| 4 | Search & filters | ⬜ Not started | |
+| 4 | Search & filters | ✅ Done | Index 1.5 KB gzipped; 14 unit tests |
 | 5 | Keystatic GitHub mode (online editing) | ⬜ Not started | **MVP** |
 | 6 | Khmer / English | ⬜ Not started | D2: i18n set up in Phases 1–3; this phase finishes and reviews translations |
 | 7 | Community contributions | ⬜ Not started | |

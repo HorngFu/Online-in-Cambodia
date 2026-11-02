@@ -14,7 +14,8 @@
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "cf:build": "opennextjs-cloudflare build",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
-    "validate": "tsx scripts/validate-content.ts"
+    "validate": "tsx scripts/validate-content.ts",
+    "test": "node --import tsx --test \"tests/**/*.test.ts\""
   },
   "dependencies": {
     "@keystatic/core": "^0.6.9",

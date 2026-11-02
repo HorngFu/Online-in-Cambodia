@@ -22,11 +22,11 @@ export function LanguageSwitch({
     <Link
       href={href}
       hrefLang={other}
-      lang={other}
-      aria-label={label}
       className="shrink-0 rounded-full border border-border px-3 py-1 text-sm hover:bg-surface"
     >
-      {text}
+      {/* The visible text must be part of the accessible name. */}
+      <span lang={other}>{text}</span>
+      <span className="sr-only"> ({label})</span>
     </Link>
   );
 }

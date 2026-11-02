@@ -1,4 +1,4 @@
-import { ArrowRight, Plus } from "lucide-react";
+import { ArrowRight, Plus, Search } from "lucide-react";
 import Link from "next/link";
 import { typeIcons } from "@/components/icons";
 import { ListingGrid } from "@/components/ListingGrid";
@@ -80,6 +80,32 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
           {dict.home.heroTitle}
         </h1>
         <p className="max-w-2xl text-lg text-muted">{dict.home.heroText}</p>
+        <form
+          role="search"
+          action={paths.listings(lang)}
+          className="flex max-w-2xl gap-2"
+        >
+          <label className="relative flex-1">
+            <span className="sr-only">{dict.search.label}</span>
+            <Search
+              aria-hidden
+              className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted"
+            />
+            <input
+              type="search"
+              name="q"
+              placeholder={dict.search.placeholder}
+              autoComplete="off"
+              className="w-full rounded-lg border border-border bg-background py-3 pr-3 pl-9 focus:border-accent focus:outline-none"
+            />
+          </label>
+          <button
+            type="submit"
+            className="rounded-lg bg-accent px-4 font-medium text-accent-foreground hover:opacity-90"
+          >
+            {dict.search.submit}
+          </button>
+        </form>
         <div className="flex flex-wrap gap-3">
           <Link
             href={paths.listings(lang)}
