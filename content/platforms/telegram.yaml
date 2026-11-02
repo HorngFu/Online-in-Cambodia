@@ -1,0 +1,6 @@
+name: Telegram
+nameKm: Telegram
+group: messaging
+urlPattern: ^https://t\.me/
+linkRequired: true
+order: 10

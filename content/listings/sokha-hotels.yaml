@@ -1,0 +1,34 @@
+name: Sokha Hotels & Resorts
+type: brand
+categories:
+  - hotel
+provinces:
+  - phnom-penh
+  - siem-reap
+  - preah-sihanouk
+description: Cambodian hotel and resort group.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://sokhahotels.com.kh/
+    isOfficial: true
+  - platform: facebook
+    availability: available
+    url: https://www.facebook.com/SokhaHotels
+    isOfficial: true
+  - platform: instagram
+    availability: available
+    url: https://www.instagram.com/sokhahotels
+    isOfficial: true
+  - platform: youtube
+    availability: available
+    url: https://www.youtube.com/user/sokhahotels
+    isOfficial: true
+  - platform: x-twitter
+    availability: available
+    url: https://twitter.com/sokhahotels
+    isOfficial: true
+sources:
+  - https://sokhahotels.com.kh/
+lastVerified: 2026-11-02
+status: active

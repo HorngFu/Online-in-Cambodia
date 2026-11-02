@@ -1,0 +1,36 @@
+name: Phare, The Cambodian Circus
+type: place
+categories:
+  - arts-and-culture
+provinces:
+  - siem-reap
+description: Social enterprise circus performing nightly shows in Siem Reap.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://pharecircus.org/
+    isOfficial: true
+  - platform: facebook
+    availability: available
+    url: https://www.facebook.com/PhareCircus
+    isOfficial: true
+  - platform: instagram
+    availability: available
+    url: https://www.instagram.com/pharecambodiancircus
+    isOfficial: true
+  - platform: youtube
+    availability: available
+    url: https://www.youtube.com/user/PPSEnterprise
+    isOfficial: true
+  - platform: linkedin
+    availability: available
+    url: https://www.linkedin.com/company/phare-performing-social-enterprise
+    isOfficial: true
+  - platform: x-twitter
+    availability: available
+    url: https://twitter.com/PhareCircus
+    isOfficial: true
+sources:
+  - https://pharecircus.org/
+lastVerified: 2026-11-02
+status: active

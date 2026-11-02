@@ -1,0 +1,6 @@
+name: Google Maps
+nameKm: Google Maps
+group: maps
+urlPattern: ^https://((www\.)?google\.[a-z.]+/maps|maps\.google\.[a-z.]+|maps\.app\.goo\.gl|goo\.gl/maps)
+linkRequired: true
+order: 10

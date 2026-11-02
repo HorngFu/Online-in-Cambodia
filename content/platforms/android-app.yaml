@@ -1,0 +1,6 @@
+name: Android app
+nameKm: កម្មវិធី Android
+group: apps
+urlPattern: ^https://play\.google\.com/
+linkRequired: true
+order: 10

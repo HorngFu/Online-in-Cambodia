@@ -1,0 +1,29 @@
+name: Institute of Technology of Cambodia
+nameKm: វិទ្យាស្ថានបច្ចេកវិទ្យាកម្ពុជា
+type: school
+categories:
+  - university
+provinces:
+  - phnom-penh
+description: Public engineering and technology institute in Phnom Penh.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://itc.edu.kh/
+    isOfficial: true
+  - platform: facebook
+    availability: available
+    url: https://www.facebook.com/itckh
+    isOfficial: true
+  - platform: youtube
+    availability: available
+    url: https://www.youtube.com/c/itcedukhcambodia
+    isOfficial: true
+  - platform: telegram
+    availability: available
+    url: https://t.me/itckh
+    isOfficial: true
+sources:
+  - https://itc.edu.kh/
+lastVerified: 2026-11-02
+status: active

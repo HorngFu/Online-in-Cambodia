@@ -1,0 +1,24 @@
+name: Air Cambodia
+type: company
+categories:
+  - airline
+provinces:
+  - phnom-penh
+description: Cambodia's national flag carrier airline (formerly Cambodia Angkor Air).
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://www.aircambodia.com/
+    isOfficial: true
+  - platform: facebook
+    availability: available
+    url: https://www.facebook.com/AirCambodiaK6
+    isOfficial: true
+  - platform: instagram
+    availability: available
+    url: https://www.instagram.com/aircambodiak6
+    isOfficial: true
+sources:
+  - https://www.aircambodia.com/
+lastVerified: 2026-11-02
+status: active

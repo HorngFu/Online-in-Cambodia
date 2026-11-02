@@ -162,7 +162,7 @@ One file per entity, e.g. `content/listings/brown-coffee.yaml`.
 | --- | --- | --- |
 | `platform` | relation → Platform | e.g. Telegram |
 | `availability` | select | `available` · `not_available` · `unknown` |
-| `url` | URL | Required when `available` |
+| `url` | URL | Required when `available`, unless the platform has `linkRequired: false` (e.g. KHQR) |
 | `handle` | text | e.g. `@browncoffeekh` |
 | `isOfficial` | checkbox | Helps users avoid fake pages |
 | `note` | text | e.g. "Orders only, no support" |
@@ -176,12 +176,13 @@ One file per entity, e.g. `content/listings/brown-coffee.yaml`.
 | Field | Notes |
 | --- | --- |
 | `name`, `nameKm` | |
-| `group` | `website` · `social` · `messaging` · `maps` · `delivery` · `payment` · `marketplace` · `jobs` · `other` |
-| `icon` | SVG |
+| `group` | `website` · `social` · `messaging` · `maps` · `delivery` · `payment` · `marketplace` · `apps` · `jobs` · `other` |
 | `urlPattern` | Optional regex to validate links |
+| `linkRequired` | `false` for platforms without a page to link to (payments, WeChat, delivery apps) |
 | `order` | Display order in the grid |
+| `icon` | *(Phase 3)* SVG icon |
 
-**Suggested starting list (please review — D10):**
+**Starting list (26 platforms, seeded in Phase 2; please review — D10):**
 
 | Group | Platforms |
 | --- | --- |
@@ -189,10 +190,11 @@ One file per entity, e.g. `content/listings/brown-coffee.yaml`.
 | Social | Facebook, Instagram, TikTok, YouTube, LinkedIn, X (Twitter) |
 | Messaging | Telegram, WhatsApp, LINE, WeChat |
 | Maps | Google Maps, Apple Maps |
-| Delivery / ride | Grab, Nham24, WOWNOW, E-GetS *(verify which are active)* |
-| Payment | KHQR / Bakong, ABA Pay, ACLEDA, Wing, cards |
-| Marketplace / commerce | Khmer24, Facebook Marketplace, Shopify / own e-shop |
-| Jobs | CamHR, BongThom, LinkedIn Jobs |
+| Delivery / ride | Grab, foodpanda, Nham24, WOWNOW, E-GetS *(all still mentioned by 2025–26 sources; confirm locally)* |
+| Payment | KHQR, Card payments *(KHQR covers every Bakong member bank, so individual bank apps aren't listed separately)* |
+| Marketplace | Khmer24 |
+| Mobile apps | Android app, iPhone app |
+| Jobs | CamHR, BongThom *(LinkedIn is under Social)* |
 
 ### 4.3 Category
 
@@ -296,12 +298,13 @@ Each phase is sized so it can be built and reviewed in one or a few sessions.
 **Goal:** Editors can create listings, platforms and categories in the Keystatic UI locally.
 
 **Tasks**
-- [ ] Implement collections from [Section 4](#4-content-model): `listings`, `platforms`, `categories`.
-- [ ] Fixed lists: listing types, 25 provinces (EN + KM), availability values.
-- [ ] Content reader helpers in `src/lib/content.ts` (typed).
-- [ ] Validation script `scripts/validate-content.ts` (e.g. `available` requires URL, URL matches platform pattern, no duplicate slugs) — runs in CI.
-- [ ] Seed: all platforms, ~20 categories, **25–30 real sample listings** across types and provinces.
-- [ ] Doc: `docs/CONTENT_GUIDE.md` — how to add and verify a listing.
+- [x] Implement collections from [Section 4](#4-content-model): `listings`, `platforms`, `categories` (`keystatic.config.ts`).
+- [x] Fixed lists: listing types, 25 provinces + nationwide (EN + KM), availability, statuses, platform groups (`src/lib/taxonomy.ts`). 👤 *Khmer labels need a native-speaker review.*
+- [x] Content reader helpers in `src/lib/content.ts` (typed).
+- [x] Validation script `scripts/validate-content.ts` (`npm run validate`), runs in CI.
+- [x] Seed: 26 platforms, 25 categories, **28 real listings** (8 types, 6 provinces + nationwide). Every link was taken from the organization's own website; anything not found there is left as unknown.
+- [x] Doc: [`docs/CONTENT_GUIDE.md`](CONTENT_GUIDE.md).
+- [x] Seed files match Keystatic's own YAML formatting, so the first edit doesn't produce a noisy diff.
 
 **Done when**
 - `npm run dev` → `/keystatic` lets you add/edit all content types.
@@ -502,7 +505,7 @@ Pick items as needed — each can be its own mini-phase:
 | --- | --- | --- | --- |
 | 0 | Project foundations | ✅ Done | Defaults accepted, see [DECISIONS.md](DECISIONS.md) |
 | 1 | Scaffold + Cloudflare deploy spike | ✅ Done | Live on workers.dev; auto-deploys from `main` |
-| 2 | Content model + sample data | ⬜ Not started | |
+| 2 | Content model + sample data | ✅ Done | 28 listings; Khmer labels awaiting native review |
 | 3 | Public site MVP | ⬜ Not started | |
 | 4 | Search & filters | ⬜ Not started | |
 | 5 | Keystatic GitHub mode (online editing) | ⬜ Not started | **MVP** |

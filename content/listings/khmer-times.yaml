@@ -1,0 +1,36 @@
+name: Khmer Times
+type: company
+categories:
+  - news
+provinces:
+  - nationwide
+description: English-language news publication covering Cambodia.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://www.khmertimeskh.com/
+    isOfficial: true
+  - platform: facebook
+    availability: available
+    url: https://www.facebook.com/khmertimes
+    isOfficial: true
+  - platform: youtube
+    availability: available
+    url: https://www.youtube.com/channel/UCrt1z-amDxCuORWclr20B1Q
+    isOfficial: true
+  - platform: linkedin
+    availability: available
+    url: https://www.linkedin.com/company/khmer-times
+    isOfficial: true
+  - platform: x-twitter
+    availability: available
+    url: https://twitter.com/KhmerTimes
+    isOfficial: true
+  - platform: telegram
+    availability: available
+    url: https://t.me/khmertimesbreakingnews
+    isOfficial: true
+sources:
+  - https://www.khmertimeskh.com/
+lastVerified: 2026-11-02
+status: active

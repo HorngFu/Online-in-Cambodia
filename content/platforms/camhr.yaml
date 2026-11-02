@@ -1,0 +1,6 @@
+name: CamHR
+nameKm: CamHR
+group: jobs
+urlPattern: ^https://(www\.)?camhr\.com/
+linkRequired: true
+order: 10

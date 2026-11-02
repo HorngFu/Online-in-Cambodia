@@ -1,0 +1,5 @@
+name: foodpanda
+nameKm: foodpanda
+group: delivery
+linkRequired: false
+order: 20

@@ -1,0 +1,6 @@
+name: Facebook
+nameKm: Facebook
+group: social
+urlPattern: ^https://(www\.|m\.|web\.)?facebook\.com/
+linkRequired: true
+order: 10

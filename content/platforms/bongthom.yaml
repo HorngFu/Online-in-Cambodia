@@ -1,0 +1,6 @@
+name: BongThom
+nameKm: BongThom
+group: jobs
+urlPattern: ^https://(www\.)?bongthom\.com/
+linkRequired: true
+order: 20

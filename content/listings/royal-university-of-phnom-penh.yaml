@@ -1,0 +1,33 @@
+name: Royal University of Phnom Penh
+nameKm: សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ
+type: school
+categories:
+  - university
+provinces:
+  - phnom-penh
+description: Cambodia's oldest and largest public university.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://www.rupp.edu.kh/
+    isOfficial: true
+  - platform: facebook
+    availability: available
+    url: https://www.facebook.com/ruppedu.kh
+    isOfficial: true
+  - platform: tiktok
+    availability: available
+    url: https://www.tiktok.com/@www.rupp.edu.kh
+    isOfficial: true
+  - platform: youtube
+    availability: available
+    url: https://www.youtube.com/@royaluniversityofphnompenh2906
+    isOfficial: true
+  - platform: telegram
+    availability: available
+    url: https://t.me/ruppnews
+    isOfficial: true
+sources:
+  - https://www.rupp.edu.kh/
+lastVerified: 2026-11-02
+status: active

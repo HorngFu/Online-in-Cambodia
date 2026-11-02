@@ -1,0 +1,41 @@
+name: Wing Bank
+nameKm: ធនាគារ វីង
+type: company
+categories:
+  - banking
+provinces:
+  - nationwide
+description: Bank known for mobile money transfers and payments across Cambodia.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://www.wingbank.com.kh/
+    isOfficial: true
+  - platform: facebook
+    availability: available
+    url: https://www.facebook.com/WingBankKH
+    isOfficial: true
+  - platform: instagram
+    availability: available
+    url: https://www.instagram.com/wingbankkh
+    isOfficial: true
+  - platform: tiktok
+    availability: available
+    url: https://www.tiktok.com/@wingbankkh
+    isOfficial: true
+  - platform: youtube
+    availability: available
+    url: https://www.youtube.com/user/WingCambodia
+    isOfficial: true
+  - platform: linkedin
+    availability: available
+    url: https://www.linkedin.com/company/wing-bank
+    isOfficial: true
+  - platform: telegram
+    availability: available
+    url: https://t.me/WingBankCambodia
+    isOfficial: true
+sources:
+  - https://www.wingbank.com.kh/
+lastVerified: 2026-11-02
+status: active

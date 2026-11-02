@@ -1,0 +1,6 @@
+name: LINE
+nameKm: LINE
+group: messaging
+urlPattern: ^https://(line\.me|lin\.ee)/
+linkRequired: true
+order: 30

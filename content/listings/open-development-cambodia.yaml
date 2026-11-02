@@ -1,0 +1,33 @@
+name: Open Development Cambodia
+type: ngo
+categories:
+  - community-development
+  - media
+provinces:
+  - nationwide
+description: Open data platform publishing information about Cambodia's development.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://opendevelopmentcambodia.net/
+    isOfficial: true
+  - platform: facebook
+    availability: available
+    url: https://www.facebook.com/OpenDevCam
+    isOfficial: true
+  - platform: youtube
+    availability: available
+    url: https://www.youtube.com/@opendevelopmentcambodia5457
+    isOfficial: true
+  - platform: linkedin
+    availability: available
+    url: https://www.linkedin.com/company/open-development-cambodia
+    isOfficial: true
+  - platform: x-twitter
+    availability: available
+    url: https://twitter.com/opendevcam
+    isOfficial: true
+sources:
+  - https://opendevelopmentcambodia.net/
+lastVerified: 2026-11-02
+status: active

@@ -1,0 +1,37 @@
+name: Vattanac Bank
+nameKm: ធនាគារ វឌ្ឍនៈ
+type: company
+categories:
+  - banking
+provinces:
+  - phnom-penh
+description: Commercial bank headquartered in Phnom Penh.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://www.vattanacbank.com/
+    isOfficial: true
+  - platform: facebook
+    availability: available
+    url: https://www.facebook.com/vattanacbank
+    isOfficial: true
+  - platform: instagram
+    availability: available
+    url: https://www.instagram.com/vattanacbank
+    isOfficial: true
+  - platform: tiktok
+    availability: available
+    url: https://www.tiktok.com/@vattanacbank
+    isOfficial: true
+  - platform: linkedin
+    availability: available
+    url: https://www.linkedin.com/company/vattanac-bank
+    isOfficial: true
+  - platform: telegram
+    availability: available
+    url: https://t.me/vattanacbankofficial
+    isOfficial: true
+sources:
+  - https://www.vattanacbank.com/
+lastVerified: 2026-11-02
+status: active

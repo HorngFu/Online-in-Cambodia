@@ -35,6 +35,9 @@ jobs:
       - name: Formatting
         run: npm run format:check
 
+      - name: Validate content
+        run: npm run validate
+
       - name: Build for Cloudflare
         run: npm run cf:build
 

@@ -1,0 +1,5 @@
+name: KHQR
+nameKm: KHQR
+group: payment
+linkRequired: false
+order: 10

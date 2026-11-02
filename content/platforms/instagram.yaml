@@ -1,0 +1,6 @@
+name: Instagram
+nameKm: Instagram
+group: social
+urlPattern: ^https://(www\.)?instagram\.com/
+linkRequired: true
+order: 20

@@ -1,0 +1,6 @@
+name: Online store
+nameKm: ហាងអនឡាញ
+group: website
+urlPattern: ^https?://
+linkRequired: true
+order: 20

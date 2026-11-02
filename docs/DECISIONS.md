@@ -15,7 +15,7 @@ This file records the project decisions from [DEVELOPMENT_PHASES.md — Section 
 | D7 | Search | **Client-side index built at build time** | Revisit at about 5,000 listings or when the index is larger than about 1 MB gzipped. |
 | D8 | Domain | **Free `*.workers.dev` subdomain until launch** | Buy the domain in Phase 10. |
 | D9 | Logos | **Small pre-optimized WebP files (≤ 50 KB) in the repo** | Move to Cloudflare R2 if the repo grows past about 300 MB. |
-| D10 | Platforms | **Suggested list in DEVELOPMENT_PHASES.md Section 4.2** | Delivery apps must be checked to confirm they still operate in Cambodia before seeding (Phase 2). |
+| D10 | Platforms | **26 platforms, see DEVELOPMENT_PHASES.md Section 4.2** | Seeded in Phase 2. Payments simplified to KHQR + cards; foodpanda added to delivery. Add more any time in the editor (Settings → Platforms). |
 | D11 | Business owners claiming listings | **Not in MVP** | Planned as Phase 11e. |
 | D12 | Analytics | **Cloudflare Web Analytics (cookieless)** | No cookie consent banner needed. |
 
@@ -25,4 +25,5 @@ This file records the project decisions from [DEVELOPMENT_PHASES.md — Section 
 | --- | --- | --- |
 | 2026-11-01 | D1–D12 | Initial decisions recorded. |
 | 2026-11-01 | D2 | Use Next.js's built-in `app/[lang]` + JSON dictionaries pattern instead of `next-intl`: no extra dependency, fully static pages. Revisit if we need ICU plurals. |
+| 2026-11-02 | D10 | Platform list finalized for seeding: KHQR replaces individual bank apps, foodpanda and a Mobile apps group added, Facebook Marketplace and Shopify dropped. |
 | 2026-11-01 | D6 | Cache Components turned off (classic static generation) for the most predictable OpenNext behaviour; `/` → `/en` is a config redirect, not a proxy. |

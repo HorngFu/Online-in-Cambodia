@@ -1,0 +1,18 @@
+name: National Bank of Cambodia
+nameKm: ធនាគារជាតិនៃកម្ពុជា
+type: government
+categories:
+  - banking
+  - government-services
+provinces:
+  - nationwide
+description: Cambodia's central bank, which runs the Bakong payment system and KHQR.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://www.nbc.gov.kh/
+    isOfficial: true
+sources:
+  - https://www.nbc.gov.kh/
+lastVerified: 2026-11-02
+status: active

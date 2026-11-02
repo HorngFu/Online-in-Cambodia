@@ -61,6 +61,7 @@ Please follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 - [Development phases (roadmap)](docs/DEVELOPMENT_PHASES.md)
 - [Decisions](docs/DECISIONS.md)
 - [Deployment](docs/DEPLOYMENT.md)
+- [Content guide](docs/CONTENT_GUIDE.md)
 - [Contributing guide](CONTRIBUTING.md)
 - [Security policy](SECURITY.md)
 

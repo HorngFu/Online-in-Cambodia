@@ -1,0 +1,17 @@
+name: National Museum of Cambodia
+nameKm: សារមន្ទីរជាតិ
+type: place
+categories:
+  - museum
+provinces:
+  - phnom-penh
+description: Cambodia's largest museum of Khmer art and archaeology.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://www.cambodiamuseum.info/
+    isOfficial: true
+sources:
+  - https://www.cambodiamuseum.info/
+lastVerified: 2026-11-02
+status: active

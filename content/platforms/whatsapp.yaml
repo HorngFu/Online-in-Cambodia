@@ -1,0 +1,6 @@
+name: WhatsApp
+nameKm: WhatsApp
+group: messaging
+urlPattern: ^https://(wa\.me|api\.whatsapp\.com|chat\.whatsapp\.com|(www\.)?whatsapp\.com/channel)/
+linkRequired: true
+order: 20

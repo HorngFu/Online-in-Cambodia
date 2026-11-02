@@ -1,0 +1,40 @@
+name: Brown Coffee
+type: shop
+categories:
+  - cafe
+provinces:
+  - phnom-penh
+description: Cambodian coffee and bakery chain.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://www.browncoffee.com.kh/
+    isOfficial: true
+  - platform: facebook
+    availability: available
+    url: https://www.facebook.com/browncoffee.kh
+    isOfficial: true
+  - platform: instagram
+    availability: available
+    url: https://www.instagram.com/browncoffeeandbakery
+    isOfficial: true
+  - platform: youtube
+    availability: available
+    url: https://www.youtube.com/channel/UCEymIl1RM541Zx25wAyDJEA
+    isOfficial: true
+  - platform: x-twitter
+    availability: available
+    url: https://twitter.com/browncoffee_kh
+    isOfficial: true
+  - platform: android-app
+    availability: available
+    url: https://play.google.com/store/apps/details?id=kh.com.brown.app
+    isOfficial: true
+  - platform: ios-app
+    availability: available
+    url: https://apps.apple.com/us/app/brown-reward/id1636236496
+    isOfficial: true
+sources:
+  - https://www.browncoffee.com.kh/
+lastVerified: 2026-11-02
+status: active

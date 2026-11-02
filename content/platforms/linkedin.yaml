@@ -1,0 +1,6 @@
+name: LinkedIn
+nameKm: LinkedIn
+group: social
+urlPattern: ^https://([a-z]{2,3}\.)?linkedin\.com/
+linkRequired: true
+order: 50

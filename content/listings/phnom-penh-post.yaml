@@ -1,0 +1,36 @@
+name: Phnom Penh Post
+type: company
+categories:
+  - news
+provinces:
+  - nationwide
+description: English-language newspaper and news website covering Cambodia.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://phnompenhpost.com/
+    isOfficial: true
+  - platform: facebook
+    availability: available
+    url: https://www.facebook.com/PhnomPenhPost
+    isOfficial: true
+  - platform: instagram
+    availability: available
+    url: https://www.instagram.com/phnompenhpost
+    isOfficial: true
+  - platform: linkedin
+    availability: available
+    url: https://www.linkedin.com/company/phnom-penh-post
+    isOfficial: true
+  - platform: x-twitter
+    availability: available
+    url: https://x.com/phnompenhpost
+    isOfficial: true
+  - platform: telegram
+    availability: available
+    url: https://t.me/thephnompenhpost
+    isOfficial: true
+sources:
+  - https://phnompenhpost.com/
+lastVerified: 2026-11-02
+status: active

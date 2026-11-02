@@ -1,0 +1,17 @@
+name: Techo Startup Center
+nameKm: មជ្ឈមណ្ឌលបណ្តុះធុរកិច្ចថ្មី តេជោ
+type: government
+categories:
+  - technology
+provinces:
+  - phnom-penh
+description: Government startup incubator supporting Cambodian tech entrepreneurs.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://tsc.gov.kh/
+    isOfficial: true
+sources:
+  - https://tsc.gov.kh/
+lastVerified: 2026-11-02
+status: active

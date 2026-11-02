@@ -1,0 +1,6 @@
+name: iPhone app
+nameKm: កម្មវិធី iPhone
+group: apps
+urlPattern: ^https://apps\.apple\.com/
+linkRequired: true
+order: 20

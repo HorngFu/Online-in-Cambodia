@@ -1,0 +1,30 @@
+name: Ministry of Post and Telecommunications
+nameKm: ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍
+type: government
+categories:
+  - government-services
+  - telecommunications
+provinces:
+  - nationwide
+description: Government ministry responsible for post, telecoms and digital policy.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://mptc.gov.kh/
+    isOfficial: true
+  - platform: facebook
+    availability: available
+    url: https://www.facebook.com/officialmptc
+    isOfficial: true
+  - platform: youtube
+    availability: available
+    url: https://www.youtube.com/channel/UCVnVllUOZyF-HQqUvER945Q
+    isOfficial: true
+  - platform: telegram
+    availability: available
+    url: https://t.me/mptcgovkh
+    isOfficial: true
+sources:
+  - https://mptc.gov.kh/
+lastVerified: 2026-11-02
+status: active

@@ -1,0 +1,49 @@
+name: Cellcard
+nameKm: សែលកាត
+type: company
+categories:
+  - telecommunications
+provinces:
+  - nationwide
+description: Mobile network operator providing phone and internet services nationwide.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://www.cellcard.com.kh/
+    isOfficial: true
+  - platform: facebook
+    availability: available
+    url: https://www.facebook.com/cellcardFanPage
+    isOfficial: true
+  - platform: instagram
+    availability: available
+    url: https://www.instagram.com/cellcardkh
+    isOfficial: true
+  - platform: tiktok
+    availability: available
+    url: https://www.tiktok.com/@cellcardplay
+    isOfficial: true
+  - platform: youtube
+    availability: available
+    url: https://www.youtube.com/user/cellcardxg
+    isOfficial: true
+  - platform: linkedin
+    availability: available
+    url: https://www.linkedin.com/company/655457
+    isOfficial: true
+  - platform: telegram
+    availability: available
+    url: https://t.me/cellcardkh
+    isOfficial: true
+  - platform: android-app
+    availability: available
+    url: https://play.google.com/store/apps/details?id=com.amatak.mycellcard
+    isOfficial: true
+  - platform: ios-app
+    availability: available
+    url: https://apps.apple.com/kh/app/cellcard/id977888051
+    isOfficial: true
+sources:
+  - https://www.cellcard.com.kh/
+lastVerified: 2026-11-02
+status: active

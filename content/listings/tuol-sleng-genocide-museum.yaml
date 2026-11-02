@@ -1,0 +1,29 @@
+name: Tuol Sleng Genocide Museum
+nameKm: សារមន្ទីរឧក្រិដ្ឋកម្មប្រល័យពូជសាសន៍ទួលស្លែង
+type: place
+categories:
+  - museum
+provinces:
+  - phnom-penh
+description: Museum and memorial at the former S-21 detention center in Phnom Penh.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://tuolsleng.gov.kh/
+    isOfficial: true
+  - platform: facebook
+    availability: available
+    url: https://www.facebook.com/TuolSlengGenocideMuseum
+    isOfficial: true
+  - platform: youtube
+    availability: available
+    url: https://www.youtube.com/channel/UCk3efFSvV4TbZVR2D7j98Ww
+    isOfficial: true
+  - platform: x-twitter
+    availability: available
+    url: https://twitter.com/TuolSlengMuseum
+    isOfficial: true
+sources:
+  - https://tuolsleng.gov.kh/
+lastVerified: 2026-11-02
+status: active

@@ -1,0 +1,28 @@
+name: Royal Phnom Penh Hospital
+type: company
+categories:
+  - health
+provinces:
+  - phnom-penh
+description: Private international hospital in Phnom Penh.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://www.royalphnompenhhospital.com/
+    isOfficial: true
+  - platform: facebook
+    availability: available
+    url: https://web.facebook.com/RoyalphnompenhhospitalOfficial
+    isOfficial: true
+  - platform: youtube
+    availability: available
+    url: https://www.youtube.com/channel/UCIMLn_JZHAg5puiCszPJ_TA
+    isOfficial: true
+  - platform: telegram
+    availability: available
+    url: https://t.me/royalphnompenhhospitalofficial
+    isOfficial: true
+sources:
+  - https://www.royalphnompenhhospital.com/
+lastVerified: 2026-11-02
+status: active

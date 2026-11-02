@@ -1,0 +1,44 @@
+name: Metfone
+type: company
+categories:
+  - telecommunications
+provinces:
+  - nationwide
+description: Mobile network operator providing phone and internet services nationwide.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://metfone.com.kh/
+    isOfficial: true
+  - platform: facebook
+    availability: available
+    url: https://web.facebook.com/metfone.closer
+    isOfficial: true
+  - platform: instagram
+    availability: available
+    url: https://www.instagram.com/metfone.closer
+    isOfficial: true
+  - platform: tiktok
+    availability: available
+    url: https://www.tiktok.com/@metfone.closer
+    isOfficial: true
+  - platform: youtube
+    availability: available
+    url: https://www.youtube.com/@metfone.closer
+    isOfficial: true
+  - platform: linkedin
+    availability: available
+    url: https://www.linkedin.com/company/metfonecloser
+    isOfficial: true
+  - platform: telegram
+    availability: available
+    url: https://t.me/metfone_closer
+    isOfficial: true
+  - platform: android-app
+    availability: available
+    url: https://play.google.com/store/apps/details?id=com.metfone.sis
+    isOfficial: true
+sources:
+  - https://metfone.com.kh/
+lastVerified: 2026-11-02
+status: active

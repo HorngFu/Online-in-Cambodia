@@ -1,0 +1,5 @@
+name: Card payments
+nameKm: ការទូទាត់តាមកាត
+group: payment
+linkRequired: false
+order: 20

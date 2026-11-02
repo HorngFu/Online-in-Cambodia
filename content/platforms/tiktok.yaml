@@ -1,0 +1,6 @@
+name: TikTok
+nameKm: TikTok
+group: social
+urlPattern: ^https://(www\.)?tiktok\.com/@
+linkRequired: true
+order: 30

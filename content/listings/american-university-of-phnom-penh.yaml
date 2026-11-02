@@ -1,0 +1,33 @@
+name: American University of Phnom Penh
+nameKm: សាកលវិទ្យាល័យអាមេរិកាំងភ្នំពេញ
+type: school
+categories:
+  - university
+provinces:
+  - phnom-penh
+description: Private university in Phnom Penh offering American-style degree programs.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://www.aupp.edu.kh/
+    isOfficial: true
+  - platform: facebook
+    availability: available
+    url: https://www.facebook.com/aupp.kh
+    isOfficial: true
+  - platform: instagram
+    availability: available
+    url: https://www.instagram.com/aupp.edu.kh
+    isOfficial: true
+  - platform: linkedin
+    availability: available
+    url: https://www.linkedin.com/school/american-university-of-phnom-penh
+    isOfficial: true
+  - platform: telegram
+    availability: available
+    url: https://t.me/AUPPkh
+    isOfficial: true
+sources:
+  - https://www.aupp.edu.kh/
+lastVerified: 2026-11-02
+status: active

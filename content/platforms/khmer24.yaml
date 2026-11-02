@@ -1,0 +1,6 @@
+name: Khmer24
+nameKm: Khmer24
+group: marketplace
+urlPattern: ^https://(www\.)?khmer24\.com/
+linkRequired: true
+order: 10

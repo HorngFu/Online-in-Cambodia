@@ -1,0 +1,5 @@
+name: Grab
+nameKm: Grab
+group: delivery
+linkRequired: false
+order: 10

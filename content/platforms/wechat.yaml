@@ -1,0 +1,5 @@
+name: WeChat
+nameKm: WeChat
+group: messaging
+linkRequired: false
+order: 40

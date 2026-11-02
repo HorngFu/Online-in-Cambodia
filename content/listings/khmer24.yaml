@@ -1,0 +1,33 @@
+name: Khmer24
+type: company
+categories:
+  - shopping
+  - technology
+provinces:
+  - nationwide
+description: Online classifieds marketplace for buying and selling in Cambodia.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://www.khmer24.com/
+    isOfficial: true
+  - platform: facebook
+    availability: available
+    url: https://www.facebook.com/khmer24.com
+    isOfficial: true
+  - platform: youtube
+    availability: available
+    url: https://www.youtube.com/@Khmer24app
+    isOfficial: true
+  - platform: android-app
+    availability: available
+    url: https://play.google.com/store/apps/details?id=khmer24.com
+    isOfficial: true
+  - platform: ios-app
+    availability: available
+    url: https://apps.apple.com/kh/app/khmer24/id1133793397
+    isOfficial: true
+sources:
+  - https://www.khmer24.com/
+lastVerified: 2026-11-02
+status: active

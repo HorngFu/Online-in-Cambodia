@@ -1,0 +1,16 @@
+name: AEON Mall Phnom Penh
+type: place
+categories:
+  - shopping-mall
+provinces:
+  - phnom-penh
+description: Shopping mall in central Phnom Penh.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://www.aeonmallphnompenh.com/
+    isOfficial: true
+sources:
+  - https://www.aeonmallphnompenh.com/
+lastVerified: 2026-11-02
+status: active

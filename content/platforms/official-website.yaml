@@ -1,0 +1,6 @@
+name: Official website
+nameKm: គេហទំព័រផ្លូវការ
+group: website
+urlPattern: ^https?://
+linkRequired: true
+order: 10

@@ -1,0 +1,6 @@
+name: YouTube
+nameKm: YouTube
+group: social
+urlPattern: ^https://(www\.)?youtube\.com/
+linkRequired: true
+order: 40

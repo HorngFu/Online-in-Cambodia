@@ -18,7 +18,7 @@ Good suggestions include a **source**: a link to the official website or page wh
 
 ### 2. Become an editor
 
-Editors add and verify listings directly in the Keystatic editor. If you'd like to become one, open an issue titled "Editor request" and tell us a little about yourself and which areas (provinces or categories) you know well.
+Editors add and verify listings directly in the Keystatic editor (see the [content guide](docs/CONTENT_GUIDE.md)). If you'd like to become one, open an issue titled "Editor request" and tell us a little about yourself and which areas (provinces or categories) you know well.
 
 ### 3. Contribute code or documentation
 

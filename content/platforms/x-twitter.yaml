@@ -1,0 +1,6 @@
+name: X (Twitter)
+nameKm: X (Twitter)
+group: social
+urlPattern: ^https://(www\.)?(x|twitter)\.com/
+linkRequired: true
+order: 60

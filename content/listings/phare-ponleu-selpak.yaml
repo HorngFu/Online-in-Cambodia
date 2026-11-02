@@ -1,0 +1,38 @@
+name: Phare Ponleu Selpak
+nameKm: ផារ ពន្លឺសិល្បៈ
+type: ngo
+categories:
+  - arts-and-culture
+  - education
+provinces:
+  - battambang
+description: Arts school and NGO in Battambang teaching visual and performing arts.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://phareps.org/
+    isOfficial: true
+  - platform: facebook
+    availability: available
+    url: https://www.facebook.com/phareponleuselpak
+    isOfficial: true
+  - platform: instagram
+    availability: available
+    url: https://www.instagram.com/phareponleuselpak
+    isOfficial: true
+  - platform: youtube
+    availability: available
+    url: https://www.youtube.com/@phareponleuselpak
+    isOfficial: true
+  - platform: linkedin
+    availability: available
+    url: https://www.linkedin.com/company/phare-ponleu-selpak
+    isOfficial: true
+  - platform: x-twitter
+    availability: available
+    url: https://twitter.com/phareps
+    isOfficial: true
+sources:
+  - https://phareps.org/
+lastVerified: 2026-11-02
+status: active

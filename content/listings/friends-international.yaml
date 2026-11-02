@@ -1,0 +1,28 @@
+name: Friends-International
+type: ngo
+categories:
+  - community-development
+provinces:
+  - phnom-penh
+description: Social enterprise and NGO working with children, youth and families.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://friends-international.org/
+    isOfficial: true
+  - platform: facebook
+    availability: available
+    url: https://www.facebook.com/friendsinternational
+    isOfficial: true
+  - platform: youtube
+    availability: available
+    url: https://www.youtube.com/user/friendsinternational
+    isOfficial: true
+  - platform: x-twitter
+    availability: available
+    url: https://twitter.com/friends_intl
+    isOfficial: true
+sources:
+  - https://friends-international.org/
+lastVerified: 2026-11-02
+status: active

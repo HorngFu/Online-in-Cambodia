@@ -1,0 +1,16 @@
+name: CamHR
+type: company
+categories:
+  - technology
+provinces:
+  - nationwide
+description: Job listing and recruitment website for Cambodia.
+platforms:
+  - platform: official-website
+    availability: available
+    url: https://www.camhr.com/
+    isOfficial: true
+sources:
+  - https://www.camhr.com/
+lastVerified: 2026-11-02
+status: active
